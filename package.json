@@ -1,0 +1,35 @@
+{
+  "name": "esignal",
+  "private": true,
+  "type": "module",
+  "description": "A simple email signature generator",
+  "author": "Tran Nguyen Thuong Truong",
+  "funding": "https://github.com/sponsors/thuongtruong109",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuongtruong109/esignal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thuongtruong109/esignal/issues"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "automd": "automd",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@nuxt/scripts": "^0.9.5",
+    "@nuxt/ui": "^2.19.2",
+    "@vueuse/core": "^11.2.0",
+    "@vueuse/nuxt": "^11.2.0",
+    "automd": "^0.3.12",
+    "eslint": "^9.14.0",
+    "nuxt": "^3.14.159"
+  }
+}

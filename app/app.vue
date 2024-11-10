@@ -30,8 +30,4 @@ useSeoMeta({
 #__nuxt, #__layout, body, html {
   height: 100%;
 }
-
-.font-instrument {
-  font-family: 'Instrument', serif;
-}
 </style>

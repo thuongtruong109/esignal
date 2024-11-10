@@ -29,55 +29,54 @@ const options = ref<SignatureOptions>({
 })
 
 const data = ref<SignatureFormData>({
-  image: 'https://avatars.githubusercontent.com/u/71938701?v=4',
-  fullName: 'Hugo Richard',
-  jobTitle: 'Développeur Web / Directeur Artistique',
+  image: '/avatar.jpg',
+  fullName: 'Tran Nguyen Thuong Truong',
+  jobTitle: 'Web Developer',
   company: '',
   email: '',
-  phone: '(+33) 6 00 00 00 00',
+  phone: '(+84) 999 999 999',
   socials: [
-    {
+  {
       title: 'Portfolio',
-      url: 'https://hrcd.fr',
+      url: '',
       type: 'portfolio',
     },
     {
-      title: 'Twitter',
-      url: 'https://dub.sh/oQ44pBH',
-      type: 'twitter',
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/thuongtruong1009/',
+      type: 'linkedin',
+    },
+    {
+      title: 'Facebook',
+      url: 'https://facebook.com/truong.poetic',
+      type: 'facebook',
     },
     {
       title: 'Instagram',
-      url: 'https://www.instagram.com/hugo.rcd_/',
+      url: 'https://www.instagram.com/truong.poetic/',
       type: 'instagram',
     },
     {
       title: 'GitHub',
-      url: 'https://git.new/hugorcd',
+      url: 'https://github.com/thuongtruong1009',
       type: 'github',
+    },
+    {
+      title: 'Twitter',
+      url: '',
+      type: 'twitter',
     },
   ],
 })
 
-const theme = ref('dark')
 </script>
 
 <template>
-  <div class="flex h-full flex-col bg-black text-white">
-    <div class="relative flex flex-col gap-8 bg-gray-900 p-5 shadow-lg">
-      <SettingsOption v-model:options="options" v-model:data="data" />
-    </div>
-    <div class="relative flex h-full flex-col items-center justify-center" :class="theme === 'light' ? 'text-black bg-white' : 'text-white bg-black '">
-      <div class="absolute right-2 top-2 z-10 flex cursor-pointer select-none items-center gap-2">
-        <UTooltip :text="theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'">
-          <UIcon v-if="theme === 'dark'" name="lucide:sun" class="size-6" @click="theme = 'light'" />
-          <UIcon v-else name="lucide:moon" class="size-6" @click="theme = 'dark'" />
-        </UTooltip>
-      </div>
-      <SignaturePreview
-        :data
-        :options
-      />
-    </div>
+  <div class="flex h-full flex-col relative space-y-10 p-5">
+    <SettingsOption v-model:options="options" v-model:data="data" />
+    <SignaturePreview
+      :data
+      :options
+    />
   </div>
 </template>

@@ -22,7 +22,7 @@ const fields = [
 
 const items = [
   {
-    label: 'Personal Information',
+    label: 'Label',
     icon: 'lucide:user',
     slot: 'information',
   },
@@ -50,7 +50,7 @@ const items = [
   <div>
     <UTabs :items>
       <template #information>
-        <div class="grid grid-cols-2 gap-6 rounded-md bg-gray-950 p-4">
+        <div class="grid grid-cols-2 gap-6 rounded-md py-4">
           <div v-for="field in fields" :key="field.name">
             <label :for="field.name" class="mb-2 block text-sm font-medium">{{ field.label }}</label>
             <UInput :id="field.name" v-model="data[field.name]" :type="field.type" />
@@ -58,7 +58,7 @@ const items = [
         </div>
       </template>
       <template #socials>
-        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md bg-gray-950 p-4">
+        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md py-4">
           <div v-for="social in data.socials" :key="social.title">
             <UFormGroup :label="social.title">
               <UInput v-model="social.url" type="text" />
@@ -67,7 +67,7 @@ const items = [
         </div>
       </template>
       <template #image>
-        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md bg-gray-950 p-4">
+        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md py-4">
           <UFormGroup label="Image URL">
             <UInput id="image" v-model="data.image" type="text" />
           </UFormGroup>
@@ -108,7 +108,7 @@ const items = [
         </div>
       </template>
       <template #size>
-        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md bg-gray-950 p-4">
+        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md py-4">
           <UFormGroup label="Title Size">
             <URange
               id="titleSize"
@@ -139,7 +139,7 @@ const items = [
         </div>
       </template>
       <template #color>
-        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md bg-gray-950 p-4">
+        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md py-4">
           <div class="flex flex-col gap-2">
             <span class="text-sm font-medium text-gray-700 dark:text-gray-200">
               Title Color
@@ -171,7 +171,7 @@ const items = [
         </div>
       </template>
       <template #gap>
-        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md bg-gray-950 p-4">
+        <div class="mt-4 grid grid-cols-2 gap-6 rounded-md py-4">
           <UFormGroup label="Image Gap">
             <URange
               id="gap"

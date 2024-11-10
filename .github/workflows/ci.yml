@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  ci:
+  run:
     runs-on: ubuntu-latest
 
     steps:

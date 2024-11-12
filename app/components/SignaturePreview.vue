@@ -52,7 +52,7 @@ function exportAsImage() {
         <table :style="options.color.transparent ? {} : { backgroundColor: `${options.color.background}` }" class="w-full z-10 m-4">
           <tbody>
             <tr>
-              <td style="padding: 6px;" :style="{ width: `${options.image.size + options.gap.image}px` }">
+              <td style="padding: 6px;" :style="{ width: `${options.image.size + options.gap.image}px`, minWidth: `${options.image.size + options.gap.image}px` }">
                 <img
                   :src="data.image"
                   alt="Profile Picture"
